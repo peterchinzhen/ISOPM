@@ -1,5 +1,5 @@
 # ISOPM
-## 项目目前用的技术
+## 项目目前用的技术栈
 1. 前端
    vue2+vue-router+vue-resouce
 2. 后端
