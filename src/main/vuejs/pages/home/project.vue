@@ -1,16 +1,14 @@
 <template>
-  <router-view></router-view>
+  <div class="home">
+    HOME/PROJECT
+  </div>
 </template>
 
 <script type="text/javascript">
 
   export default {
-    // components: {
-    //   vslide,
-    //   vheader
-    // }
+    // TODO
   }
 </script>
 <style type="text/css">
-  
 </style>

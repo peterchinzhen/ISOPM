@@ -1,28 +1,37 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import home from '../pages/home/home'
-import login from '../pages/login/login'
-import slide from 'components/slide/slide'
+import Home from '../pages/home/Home'
+import Project from '../pages/home/Project'
+import Login from '../pages/login/login'
+import Slide from 'components/slide/slide'
+import Header from 'components/header/header'
+
 Vue.use(Router)
 
 const router = new Router({
   routes: [
     {
-      path: '/',
-      name: 'home',
+      path: '/home',
       title: '主页',
-      component: home
-    },
-    {
-      path: '/slide',
-      name: 'slide',
-      component: slide
+      components: {
+        header: Header,
+        slider: Slide,
+        main: Home
+      },
+      children: [
+        {
+          // path: home/project
+          path: 'project',
+          component: Project,
+          name: 'main'
+        }
+      ]
     },
     {
       path: '/login',
       name: 'login',
       title: '登录',
-      component: login
+      component: Login
     }
   ]
 })
